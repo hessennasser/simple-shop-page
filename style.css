@@ -1,0 +1,297 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    clip-path: circle(30% at right 70%);
+    z-index: 1;
+}
+
+.container {
+    width: 80%;
+    height: 80%;
+    background-image: linear-gradient(to bottom, #ffda75cc, #68d0f3d5);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container nav ul {
+    list-style: none;
+}
+
+.container nav ul li {
+    display: inline-flex;
+}
+
+.container nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    margin-right: 20px;
+    margin-left: 15px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.container nav ul li a:hover {
+    color: red;
+    border-bottom: #000 solid 3px;
+}
+
+.container nav .logo {
+    font-size: 54px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    margin: 10px 40px;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+}
+
+.content h2 {
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 40px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+
+.content p {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 70px;
+}
+
+.image img {
+    position: absolute;
+    width: 415px;
+    height: 415px;
+    right: 0;
+    z-index: 2;
+}
+
+/* footer design */
+
+.foot {
+    width: 68%;
+    height: 7%;
+    position: absolute;
+    background-color: #80d4eeba;
+    bottom: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: #00407e;
+}
+
+.data p {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+@media (min-width:725px) and (max-width:1195px) {
+    body::before {
+        clip-path: circle(30% at bottom);
+        z-index: -1;
+    }
+
+    .content h2 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 0px;
+        margin-left: 70px;
+    }
+
+    .content p {
+        font-size: 14px;
+        margin-top: 0px;
+        line-height: 18px;
+    }
+
+    .image img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .foot {
+        width: 80%;
+    }
+
+    .footer-title {
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+
+    .container nav .logo {
+        font-size: 32px;
+    }
+}
+
+
+@media (min-width:545px) and (max-width:724px) {
+    body::before {
+        clip-path: circle(24% at bottom);
+        z-index: 0;
+    }
+
+    .content p {
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 0px;
+        margin-left: 45px;
+    }
+
+    .content h2 {
+        font-size: 26px;
+        font-weight: bold;
+        line-height: 30px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-top: 45px;
+        margin-left: 45px;
+    }
+
+    .container nav .logo {
+        font-size: 28px;
+    }
+
+    .container nav ul li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 12px;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .image img {
+        width: 150px;
+        height: 150px;
+        right: 40%;
+        top: 72%;
+    }
+
+    .foot {
+        width: 80%;
+    }
+
+    .footer-title {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .data {
+        font-size: 10px;
+    }
+}
+
+
+@media (min-width:320px) and (max-width:544px) {
+    .container nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        margin: 0px;
+        flex-direction: column;
+    }
+
+    .container nav .logo {
+        font-size: 32px;
+    }
+
+    .container nav ul li a {
+        font-size: 16px;
+        margin-right: 0px;
+        margin-left: 8px;
+        font-weight: 400;
+        transition: 0.3s;
+    }
+
+    body::before {
+        clip-path: circle(30% at bottom);
+        z-index: 0;
+    }
+
+    .image img {
+        width: 150px;
+        height: 150px;
+        top: 70%;
+        right: 30%;
+    }
+
+    .content h2 {
+        font-size: 20px;
+        line-height: 25px;
+        margin-top: 28px;
+        margin-left: 35px;
+    }
+
+    .content p {
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 5px;
+        margin-left: 35px;
+    }
+
+    .foot {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-title {
+        font-size: 10px;
+    }
+
+    .data {
+        margin: 0 -10px;
+        font-size: 8px;
+    }
+}
