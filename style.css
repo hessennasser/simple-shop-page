@@ -232,7 +232,7 @@ body::before {
 }
 
 
-@media (min-width:320px) and (max-width:544px) {
+@media (min-width:300px) and (max-width:544px) {
     .container nav {
         display: flex;
         justify-content: space-between;
